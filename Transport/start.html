@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_start.css">
+    <link rel="shortcut icon" href="IMG/ikona.png" type="image/x-icon">
+    <title>Citylink</title>
+    <style>
+        #loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+    </style>
+    <script>
+        function redirectToMain() {
+            document.getElementById('loading').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'main.php';
+            }, 3000); 
+        }
+    </script>
+</head>
+<body>
+    <h2>Citylink</h2>
+    <p>Citylink - to kompleksowe rozwiązanie do efektywnego planowania, zarządzania i monitorowania transportem publicznym. 
+        Zaprojektowany z myślą o agencjach transportowych, operatorach oraz użytkownikach końcowych, program ten integruje zaawansowane funkcje planowania trasy, 
+        zarządzania flotą pojazdów oraz analizy danych w jednym intuicyjnym interfejsie.</p>
+    <button onclick="redirectToMain()">Kliknij mnie!</button>
+
+    <div id="loading">
+        <img src="IMG/ekran_ladowania.gif" alt="Ładowanie...">
+    </div>
+</body>
+</html>

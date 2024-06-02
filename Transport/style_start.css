@@ -1,0 +1,109 @@
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #f2f2f2;
+}
+body{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1018%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c504.531C107.997%2c502.906%2c217.312%2c534.589%2c317.281%2c493.698C427.392%2c448.658%2c516.304%2c364.808%2c582.784%2c266.149C657.722%2c154.939%2c725.86%2c30.485%2c719.678%2c-103.474C713.258%2c-242.594%2c642.386%2c-372.411%2c548.568%2c-475.337C456.118%2c-576.762%2c335.456%2c-670.002%2c198.327%2c-675.441C66.893%2c-680.655%2c-23.513%2c-546.365%2c-147.681%2c-502.955C-262.609%2c-462.776%2c-407.916%2c-513.326%2c-498.396%2c-431.863C-589.834%2c-349.538%2c-596.72%2c-209.987%2c-609.05%2c-87.568C-620.963%2c30.706%2c-619.749%2c152.379%2c-568.024%2c259.408C-516.889%2c365.216%2c-431.374%2c456.777%2c-323.476%2c503.339C-222.428%2c546.945%2c-110.043%2c506.187%2c0%2c504.531' fill='%230b2239'%3e%3c/path%3e%3cpath d='M1920 1993.946C2087.163 1975.951 2209.504 1836.094 2331.696 1720.6109999999999 2435.2219999999998 1622.769 2501.929 1501.779 2571.99 1377.754 2648.944 1241.526 2784.5190000000002 1113.77 2761.955 958.9449999999999 2739.391 804.12 2565.465 727.6759999999999 2460.357 611.778 2358.159 499.08900000000006 2297.294 334.75199999999995 2152.778 287.22900000000004 2007.502 239.45600000000002 1860.645 338.31500000000005 1710.071 365.049 1536.576 395.852 1334.257 341.91099999999994 1200.2640000000001 456.345 1064.354 572.4159999999999 1036.587 772.875 1023.8 951.146 1011.603 1121.1970000000001 1054.6799999999998 1287.821 1129.641 1440.945 1203.129 1591.058 1310.164 1720.019 1447.107 1815.836 1587.973 1914.397 1749.065 2012.347 1920 1993.946' fill='%23113255'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1018'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  margin-top: 5%;
+}
+button {
+  position: relative;
+  margin-left: 45%;
+  margin-top: 8%;
+  width: 10%;
+  padding: 0.8em 1em;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+button:hover {
+  animation: sh0 0.5s ease-in-out both;
+}
+
+@keyframes sh0 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(7deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-7deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+  z-index: -1;
+  transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+button:hover::before,
+button:hover::after {
+  opacity: 0.15;
+  transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+button:hover::before {
+  transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+button:hover::after {
+  transform: translate(50%, 0) scale(1.1);
+}
+
+
+p {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 70px;
+  color: #cfcfcf;
+  font-family: arial;
+}
